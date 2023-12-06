@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner input = new Scanner(System.in);
+         System.out.print("Enter a number in pounds: ");
+         Double pound = input.nextDouble();
+         Double kilogram = pound * 0.454;
+         System.out.println( pound + " pounds is "  +kilogram+ " kilograms");
+    
+     }
+}
