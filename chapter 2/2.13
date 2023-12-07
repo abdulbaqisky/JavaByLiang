@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class HelloWorld{
+     public static void main(String []args){
+         
+         Scanner input = new Scanner(System.in);
+         System.out.print("Enter the monthly saving amount: ");
+         double rate = 5.0;
+         double amount = input.nextDouble();
+         double monthly_interest_rate = 0.05 / 12;
+        double first_month_value = amount * (1 + monthly_interest_rate);
+        double second_month_value = (amount + first_month_value) * (1 + monthly_interest_rate);
+        double third_month_value = (amount + second_month_value) * (1 + monthly_interest_rate);
+        double fourth_month_value = (amount + third_month_value) * (1 + monthly_interest_rate);
+        double fifth_month_value = (amount + fourth_month_value) * (1 + monthly_interest_rate);
+        double sixth_month_value = (amount + fifth_month_value) * (1 + monthly_interest_rate);
+        System.out.println("After the sixth month, the account value is " +sixth_month_value);
+        
+        
+     }
+}
