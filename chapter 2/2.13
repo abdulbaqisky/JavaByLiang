@@ -4,7 +4,6 @@ public class HelloWorld{
          
          Scanner input = new Scanner(System.in);
          System.out.print("Enter the monthly saving amount: ");
-         double rate = 5.0;
          double amount = input.nextDouble();
          double monthly_interest_rate = 0.05 / 12;
         double first_month_value = amount * (1 + monthly_interest_rate);
