@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class ComputeTax {
+public static void main(String[] args) {
+// Create a Scanner
+Scanner input = new Scanner(System.in);
+
+int rand = (int)Math.round( Math.random() )  ;
+System.out.print("Enter 0 for head , 1 for tail: ");
+
+int guess = input.nextInt();
+
+// Prompt the user to enter taxable income
+ System.out.print(rand==guess?"You guessed right":"You guessed wrongly");
+
+}
+}
