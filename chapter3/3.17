@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class HelloWorld {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+int number = (int)(Math.random() * 3);
+
+System.out.println("scissor (0), rock (1), paper (2): ");
+int guess = input.nextInt();
+System.out.print("The computer is ");
+
+switch(number){
+    case 0:
+        System.out.print("scissor. ");
+        if (guess == 0){
+            System.out.print("You are scissor. It is a draw");
+        }else if (guess == 1){
+            System.out.print("You are rock. You won");
+        } else System.out.print("You are paper. You lost");
+        break;
+    case 1:
+        System.out.print("rock. ");
+        if (guess == 0){
+            System.out.print("You are scissor. You lost");
+        }else if (guess == 1){
+            System.out.print("You are rock. It is a draw");
+        } else System.out.print("You are paper. You won");
+        break;
+    case 2:
+        System.out.print("paper. ");
+        if (guess == 0){
+            System.out.print("You are scissor. You won");
+        }else if (guess == 1){
+            System.out.print("You are rock. You lost");
+        } else System.out.print("You are paper. It is a draw ");
+        break;
+}
+
+}
+}
