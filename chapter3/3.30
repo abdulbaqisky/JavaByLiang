@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner input = new Scanner(System.in);
+         System.out.print("Enter the time zone offset to GMT: ");
+         int offset = input.nextInt();
+         long timeInMillis = System.currentTimeMillis();
+         
+         long secondsElapsed = timeInMillis / 1000;
+         
+         long seconds = secondsElapsed % 60;
+         
+         long minutesElapsed = secondsElapsed / 60;
+         
+         long minutes = minutesElapsed % 60;
+         
+         long hoursElapsed = minutesElapsed / 60;
+         
+         long hours = hoursElapsed % 24;
+         long currentHour = hours + offset;
+         if (currentHour > 12){
+             currentHour = currentHour % 12;
+             System.out.println("The current time is: " +currentHour +":"+minutes+":"+seconds+" PM");
+         } else
+         System.out.println("The current time is: " +(currentHour)+":"+minutes+":"+seconds+ " AM");
+    
+     }
+}
