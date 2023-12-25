@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class HelloWorld{
+
+     public static void main(String []args){
+         Scanner input = new Scanner(System.in);
+         
+         System.out.print("Enter an integer: ");
+         int x1 = input.nextInt();
+         
+            System.out.println("Is "+x1+ " divisible by 5 and 6? "+(x1 % 6== 0 && x1 % 5 == 0));
+            System.out.println("Is "+x1+ " divisible by 5 or 6? "+(x1 % 6== 0 || x1 % 5 == 0));
+            System.out.println("Is "+x1+ " divisible by 5 or 6, but not both? "+(x1 % 6== 0 ^ x1 % 5 == 0));
+        
+        
+     }
+}
