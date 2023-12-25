@@ -16,12 +16,12 @@ public class HelloWorld{
            dollar = input.nextDouble();
            yuan = dollar * rate;
            System.out.print("$" +dollar+" is "+yuan+ " yuan"); 
-        } else {
+        } else if (what == 1){
            System.out.print("Enter the RMB amount: "); 
            double rmb = input.nextDouble();
            dollar = rmb / rate;
            System.out.print(rmb + "yuan is $" +dollar); 
-        }
+        } else System.out.println("Incorrect Input");
     
      }
 }
