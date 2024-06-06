@@ -1,1 +1,18 @@
+import java.util.Scanner;
+public class HelloWorld {
 
+    public static void main(String []args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of sides: ");
+        double n = input.nextDouble();
+        System.out.print("Enter the side: ");
+        double s = input.nextDouble();
+        //(s is the length of a side)
+        //(n is the number of sides)
+
+        double area = (n * Math.pow(s, 2)) / (4 * Math.tan(Math.PI/n));
+
+        System.out.print("The area of the hexagon is "  + area);
+    }
+
+}
