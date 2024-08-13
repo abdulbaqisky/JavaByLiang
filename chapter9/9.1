@@ -1,8 +1,10 @@
 public class Rectangle{
-    double width = 1;
-    double height = 1;
+    private double width;
+    private double height;
     
-Rectangle() {}
+Rectangle() {
+    this(1.0,1.0);
+}
 
 Rectangle (double width, double height){
     this.width = width;
@@ -12,20 +14,16 @@ Rectangle (double width, double height){
 public double getArea(double width, double height){
     return width * height;
 }
-
 public double getPerimeter(double width, double height){
     return 2 * (width + height);
 }
 
      public static void main(String []args){
-         Rectangle r1 = new Rectangle();
-         r1.width = 4;
-         r1.height = 40;
+         Rectangle r1 = new Rectangle(4,40);
+         Rectangle r2 = new Rectangle(3.5,35.9);
         System.out.println("The area of the rectangle with width "+r1.width +" and height " +r1.height +" is " +r1.getArea(r1.width, r1.height)+"cm2");
-     System.out.println("The perimeter of the rectangle with width "+r1.width +" and height " +r1.height +" is " +r1.getPerimeter(r1.width, r1.height)+"cm");
-     Rectangle r2 = new Rectangle();
-         r2.width = 3.5;
-         r2.height = 35.9;
+        System.out.println("The perimeter of the rectangle with width "+r1.width +" and height " +r1.height +" is " +r1.getPerimeter(r1.width, r1.height)+"cm");
+        
         System.out.println("The area of the rectangle with width "+r2.width +" and height " +r2.height +" is " +r2.getArea(r2.width, r2.height)+"cm2");
      System.out.println("The perimeter of the rectangle with width "+r2.width +" and height " +r2.height +" is " +r2.getPerimeter(r2.width, r2.height)+"cm");
      
